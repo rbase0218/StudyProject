@@ -10,10 +10,12 @@ public class AnimationCurveBehaviour : MonoBehaviour
     public GameObject animObject;
     public Vector3 animTargetPos;
 
-    [Space(10)] public GameObject normalObject;
+    [Space(10)] 
+    public GameObject normalObject;
     public Vector3 normalTargetPos;
 
-    [Space(10)] public float targetOffset = .0f;
+    [Space(10)] 
+    public float targetOffset = .0f;
     public bool isStarted = false;
 
 
@@ -53,16 +55,18 @@ public class AnimationCurveBehaviour : MonoBehaviour
     private IEnumerator MoveAnimCurve()
     {
         float timer = .0f;
+        float activeTime = 3f;
 
-        while (timer < 1f)
+        
+        while (timer < activeTime)
         {
-            animObject.transform.position = new Vector3(animCurve.Evaluate(timer) * animTargetPos.x,
+            animObject.transform.position = new Vector3(animCurve.Evaluate(timer / activeTime) * animTargetPos.x,
                 animObject.transform.position.y,
                 animObject.transform.position.z);
 
             yield return null;
 
-            timer += Time.deltaTime;
+            timer += Time.deltaTime / activeTime;
         }
     }
 
