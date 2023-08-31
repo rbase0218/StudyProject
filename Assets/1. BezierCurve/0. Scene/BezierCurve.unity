@@ -282,19 +282,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 41367501}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7fc02ef728797f4bb3e085f03b2cc26, type: 3}
+  m_Script: {fileID: 11500000, guid: 88e0449971814bc488e32f6c70975046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bezierPointDatas:
-  - startPoint: {x: 0, y: 0, z: 0}
-    endPoint: {x: 1, y: 0, z: 0}
-    startTangent: {x: 2.12, y: 0, z: 0}
-    endTangent: {x: 0, y: 1.56, z: 0}
-  - startPoint: {x: -1.27, y: 0, z: 1.05}
-    endPoint: {x: 1.84, y: 0, z: 1}
-    startTangent: {x: 0, y: 0, z: 0}
-    endTangent: {x: 0, y: 0, z: 0}
-  isShow: 1
+  line1:
+    point:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+  line2:
+    point:
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
+  t: 1
+  isView: 1
 --- !u!1 &1170527885
 GameObject:
   m_ObjectHideFlags: 0
