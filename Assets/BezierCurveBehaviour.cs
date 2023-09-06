@@ -87,10 +87,10 @@ public class BezierCurveBehaviour : MonoBehaviour
         Gizmos.color = Color.black;
         Gizmos.DrawLine(line1Y, line2X);
 
-        var connectRatio = t * (line1Y + line2X);
-        connectRatio.y /= 2;
-
-        Gizmos.color = Color.red;
+        var connectRatio = (1 - t) * (1 - t) * line1.point[0] + (2 * t) * (1 - t) * line1.point[1] +
+                           (t * t) * line2.point[1];
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawSphere(connectRatio, 0.03f);
 
         // Ratio Label
         var labelPos = (line1Y + line2X) / 2;

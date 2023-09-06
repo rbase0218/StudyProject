@@ -22,6 +22,7 @@ public class AnimationCurveBehaviour : MonoBehaviour
     [Button("Set Target Pos")]
     private void SetTargetPos()
     {
+        
         animTargetPos = animObject.transform.position;
         animTargetPos.x += targetOffset;
 
